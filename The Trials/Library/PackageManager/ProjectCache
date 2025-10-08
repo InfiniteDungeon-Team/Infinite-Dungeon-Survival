@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Unity Projects/The Trials/Packages/manifest.json
+    m_FilePath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947523186996660
+      ticks: 638954503130000000
     m_Hash: 359813943
   m_LockFileStatus:
-    m_FilePath: C:/Unity Projects/The Trials/Packages/packages-lock.json
+    m_FilePath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947523299342542
+      ticks: 638954503130000000
     m_Hash: 247152555
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Unity Projects/The Trials/Packages
+m_ProjectPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Packages
 m_EditorVersion: 6000.2.0f1 (eed1c594c913)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.9.3
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -206,7 +206,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.1
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.feature.2d@dd1ea8910f12
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.feature.2d@dd1ea8910f12
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -352,7 +352,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.36
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ide.rider@4d374c7eb6db
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.ide.rider@4d374c7eb6db
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -485,7 +485,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -526,9 +526,11 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     - 2.0.23
+    - 2.0.25
     compatible:
     - 2.0.23
-    recommended: 2.0.23
+    - 2.0.25
+    recommended: 2.0.25
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -601,7 +603,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.14.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.inputsystem@978211393e28
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.inputsystem@978211393e28
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -801,7 +803,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -897,7 +899,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.1
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.test-framework@a6f5be5f149c
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.test-framework@a6f5be5f149c
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -987,7 +989,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.timeline@c58b4ee65782
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.timeline@c58b4ee65782
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1185,7 +1187,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ugui@423bc642aff1
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.ugui@423bc642aff1
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1281,7 +1283,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.visualscripting@6279e2b7c485
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.visualscripting@6279e2b7c485
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1414,7 +1416,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.accessibility
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1491,7 +1493,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ai
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1568,7 +1570,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.androidjni
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1644,7 +1646,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.animation
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1721,7 +1723,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.assetbundle
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1798,7 +1800,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.audio
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1875,7 +1877,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.cloth
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1956,7 +1958,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.director
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2041,7 +2043,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imageconversion
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2118,7 +2120,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.imgui
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2195,7 +2197,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.jsonserialize
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2272,7 +2274,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.particlesystem
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2349,7 +2351,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2426,7 +2428,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.physics2d
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2503,7 +2505,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.screencapture
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2584,7 +2586,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrain
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2661,7 +2663,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.terrainphysics
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2746,7 +2748,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.tilemap
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2826,7 +2828,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.ui
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2903,7 +2905,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.uielements
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -3000,7 +3002,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.umbra
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -3077,7 +3079,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unityanalytics
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3161,7 +3163,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequest
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3238,7 +3240,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3323,7 +3325,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestaudio
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3408,7 +3410,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequesttexture
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3493,7 +3495,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.unitywebrequestwww
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3594,7 +3596,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vehicles
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3675,7 +3677,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.video
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3764,7 +3766,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.vr
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -3855,7 +3857,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.wind
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3932,7 +3934,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.xr
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -4021,7 +4023,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.subsystems
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -4102,7 +4104,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Program Files\Unity\Hub\Editor\6000.2.0f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.modules.hierarchycore
+  resolvedPath: /Applications/Unity/Hub/Editor/6000.2.0f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -4179,7 +4181,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4259,7 +4261,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 12.0.2
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.animation@34e0443c58ed
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.animation@34e0443c58ed
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -4521,7 +4523,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.1.0
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.pixel-perfect@2f2037a56bf7
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.pixel-perfect@2f2037a56bf7
   assetPath: Packages/com.unity.2d.pixel-perfect
   name: com.unity.2d.pixel-perfect
   displayName: 2D Pixel Perfect
@@ -4634,7 +4636,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.psdimporter@0adcab25a8fd
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.psdimporter@0adcab25a8fd
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -4839,7 +4841,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.sprite@28296e5d02fb
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.sprite@28296e5d02fb
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -4919,7 +4921,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 12.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.spriteshape@1d246726c231
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.spriteshape@1d246726c231
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -5131,7 +5133,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.tilemap@089d78c497f7
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.tilemap@089d78c497f7
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -5230,7 +5232,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.tilemap.extras@2338d989ff2a
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.tilemap.extras@2338d989ff2a
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -5390,7 +5392,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.aseprite@f6e7e126ac6d
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.aseprite@f6e7e126ac6d
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -5538,7 +5540,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.common@dd402daace1b
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.2d.common@dd402daace1b
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -5714,7 +5716,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.mathematics@8017b507cc74
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5815,7 +5817,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.collections@d49facba0036
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.collections@d49facba0036
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -6007,7 +6009,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.23
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.burst@6aff1dd08a0c
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.burst@6aff1dd08a0c
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -6240,7 +6242,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.5
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.nuget.mono-cecil@d78732e851eb
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6335,7 +6337,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.0
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
+  resolvedPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Library/PackageCache/com.unity.test-framework.performance@92d1d09a72ed
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
