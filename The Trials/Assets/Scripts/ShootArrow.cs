@@ -27,6 +27,8 @@ public class ShootArrow : MonoBehaviour
 
     void Update()
     {
+        
+
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
         Vector3 rotation = mousePos - transform.position;

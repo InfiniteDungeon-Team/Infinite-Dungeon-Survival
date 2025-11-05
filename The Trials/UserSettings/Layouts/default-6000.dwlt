@@ -120,9 +120,13 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 29
 =======
   controlID: 43
+>>>>>>> Stashed changes
+=======
+  controlID: 4405
 >>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &6
@@ -150,9 +154,13 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 30
 =======
   controlID: 44
+>>>>>>> Stashed changes
+=======
+  controlID: 4406
 >>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &7
@@ -180,9 +188,13 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   controlID: 31
 =======
   controlID: 45
+>>>>>>> Stashed changes
+=======
+  controlID: 4407
 >>>>>>> Stashed changes
   draggingID: 0
 --- !u!114 &8
@@ -221,7 +233,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -232,12 +244,12 @@ MonoBehaviour:
     height: 637
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,7 +350,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
+  m_EnterPlayModeBehavior: 1
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -361,7 +373,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -433,6 +445,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       m_SelectedIDs: 20980000
       m_LastClickedID: 0
       m_ExpandedIDs: 30f5ffffb0f7ffff8c970000bc970000
@@ -440,6 +453,11 @@ MonoBehaviour:
       m_SelectedIDs: e8c40000
       m_LastClickedID: 50408
       m_ExpandedIDs: 0e78ffff2ac50000
+>>>>>>> Stashed changes
+=======
+      m_SelectedIDs: 68960000
+      m_LastClickedID: 38504
+      m_ExpandedIDs: f4f6ffff04fbffff689600007e960000ae960000
 >>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -795,7 +813,7 @@ MonoBehaviour:
       sizeOverridden: 0
     - dockPosition: 1
       containerId: overlay-container--right
-      displayed: 1
+      displayed: 0
       id: Scene View/Tilemap Focus
       index: 4
       contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":48.0,"y":48.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
@@ -1100,9 +1118,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 0.522851, y: -1.230897, z: -0.015431495}
     speed: 2
     m_Value: {x: 0.522851, y: -1.230897, z: -0.015431495}
+=======
+    m_Target: {x: 2.7054505, y: 0.8191828, z: -0.11152588}
+    speed: 2
+    m_Value: {x: 2.7054505, y: 0.8191828, z: -0.11152588}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1152,9 +1176,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.5587635
+    m_Target: 12.018631
     speed: 2
-    m_Value: 9.5587635
+    m_Value: 12.018631
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1248,8 +1272,12 @@ MonoBehaviour:
   - Assets/Graphics/Tile Set
   m_LastFoldersGridSize: 96
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_LastProjectPath: /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The
     Trials
+=======
+  m_LastProjectPath: C:\Unity Projects\Infinite-Dungeon-Survival\The Trials
+>>>>>>> Stashed changes
 =======
   m_LastProjectPath: C:\Unity Projects\Infinite-Dungeon-Survival\The Trials
 >>>>>>> Stashed changes
@@ -1258,6 +1286,7 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_SelectedIDs: 7e990000
     m_LastClickedID: 39294
     m_ExpandedIDs: 000000005c9800005e9800006e99000000ca9a3bffffff7f
@@ -1265,6 +1294,11 @@ MonoBehaviour:
     m_SelectedIDs: ee6b0000
     m_LastClickedID: 27630
     m_ExpandedIDs: 000000007ac500007cc50000
+>>>>>>> Stashed changes
+=======
+    m_SelectedIDs: 74980000
+    m_LastClickedID: 39028
+    m_ExpandedIDs: 000000004e97000050970000
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1295,9 +1329,13 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 000000005c9800005e980000
 =======
     m_ExpandedIDs: 000000007ac500007cc50000
+>>>>>>> Stashed changes
+=======
+    m_ExpandedIDs: 000000004e97000050970000
 >>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1326,7 +1364,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000842b0500
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
