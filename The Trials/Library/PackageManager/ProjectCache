@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Unity Projects/The Trials/Packages/manifest.json
+    m_FilePath: E:/F25 Git/Infinite-Dungeon-Survival/The Trials/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947523186996660
-    m_Hash: 359813943
+      ticks: 638966822474313086
+    m_Hash: 2509410466
   m_LockFileStatus:
-    m_FilePath: C:/Unity Projects/The Trials/Packages/packages-lock.json
+    m_FilePath: E:/F25 Git/Infinite-Dungeon-Survival/The Trials/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638947523299342542
-    m_Hash: 247152555
+      ticks: 638966822474323054
+    m_Hash: 617531607
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Unity Projects/The Trials/Packages
+m_ProjectPath: E:/F25 Git/Infinite-Dungeon-Survival/The Trials/Packages
 m_EditorVersion: 6000.2.0f1 (eed1c594c913)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.9.3
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.9.3
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.collab-proxy@ab839cc7d2ad
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Unity Version Control
@@ -125,11 +125,13 @@ m_ResolvedPackages:
     - 2.9.1
     - 2.9.2
     - 2.9.3
+    - 2.10.0
     compatible:
     - 2.8.2
     - 2.9.1
     - 2.9.2
     - 2.9.3
+    - 2.10.0
     recommended: 2.8.2
     deprecated: []
   dependencies: []
@@ -206,7 +208,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.1
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.feature.2d@dd1ea8910f12
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.feature.2d@dd1ea8910f12
   assetPath: Packages/com.unity.feature.2d
   name: com.unity.feature.2d
   displayName: 2D
@@ -352,7 +354,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.36
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ide.rider@4d374c7eb6db
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.ide.rider@4d374c7eb6db
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -485,7 +487,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.23
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.ide.visualstudio@198cdf337d13
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -526,9 +528,11 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     - 2.0.23
+    - 2.0.25
     compatible:
     - 2.0.23
-    recommended: 2.0.23
+    - 2.0.25
+    recommended: 2.0.25
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -601,7 +605,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.14.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.inputsystem@978211393e28
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.inputsystem@978211393e28
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -801,7 +805,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.multiplayer.center@f3fb577b3546
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -897,7 +901,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.5.1
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.test-framework@a6f5be5f149c
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.test-framework@a6f5be5f149c
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -987,7 +991,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.timeline@c58b4ee65782
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.timeline@c58b4ee65782
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1185,7 +1189,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ugui@423bc642aff1
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.ugui@423bc642aff1
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1281,7 +1285,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.visualscripting@6279e2b7c485
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.visualscripting@6279e2b7c485
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1331,10 +1335,12 @@ m_ResolvedPackages:
     - 1.9.6
     - 1.9.7
     - 1.9.8
+    - 1.9.9
     compatible:
     - 1.9.7
     - 1.9.8
-    recommended: 1.9.8
+    - 1.9.9
+    recommended: 1.9.9
     deprecated:
     - 1.8.0-pre.1
   dependencies:
@@ -4179,7 +4185,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.ext.nunit@031a54704bff
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.ext.nunit@031a54704bff
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4259,7 +4265,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 12.0.2
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.animation@34e0443c58ed
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.animation@34e0443c58ed
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -4414,6 +4420,8 @@ m_ResolvedPackages:
     - 12.0.1
     - 12.0.2
     - 13.0.0
+    - 13.0.1
+    - 14.0.0
     compatible:
     - 12.0.2
     recommended: 12.0.2
@@ -4521,7 +4529,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.1.0
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.pixel-perfect@2f2037a56bf7
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.pixel-perfect@2f2037a56bf7
   assetPath: Packages/com.unity.2d.pixel-perfect
   name: com.unity.2d.pixel-perfect
   displayName: 2D Pixel Perfect
@@ -4634,7 +4642,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.psdimporter@0adcab25a8fd
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.psdimporter@0adcab25a8fd
   assetPath: Packages/com.unity.2d.psdimporter
   name: com.unity.2d.psdimporter
   displayName: 2D PSD Importer
@@ -4739,6 +4747,7 @@ m_ResolvedPackages:
     - 11.0.0
     - 11.0.1
     - 12.0.0
+    - 13.0.0
     compatible:
     - 11.0.1
     recommended: 11.0.1
@@ -4839,7 +4848,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.sprite@28296e5d02fb
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.sprite@28296e5d02fb
   assetPath: Packages/com.unity.2d.sprite
   name: com.unity.2d.sprite
   displayName: 2D Sprite
@@ -4919,7 +4928,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 12.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.spriteshape@1d246726c231
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.spriteshape@1d246726c231
   assetPath: Packages/com.unity.2d.spriteshape
   name: com.unity.2d.spriteshape
   displayName: 2D SpriteShape
@@ -5033,6 +5042,7 @@ m_ResolvedPackages:
     - 12.0.0
     - 12.0.1
     - 13.0.0
+    - 14.0.0
     compatible:
     - 12.0.1
     recommended: 12.0.1
@@ -5131,7 +5141,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.tilemap@089d78c497f7
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.tilemap@089d78c497f7
   assetPath: Packages/com.unity.2d.tilemap
   name: com.unity.2d.tilemap
   displayName: 2D Tilemap Editor
@@ -5230,7 +5240,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 5.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.tilemap.extras@2338d989ff2a
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.tilemap.extras@2338d989ff2a
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -5303,6 +5313,8 @@ m_ResolvedPackages:
     - 5.0.0
     - 5.0.1
     - 6.0.0
+    - 6.0.1
+    - 7.0.0
     compatible:
     - 5.0.1
     recommended: 5.0.1
@@ -5390,7 +5402,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.aseprite@f6e7e126ac6d
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.aseprite@f6e7e126ac6d
   assetPath: Packages/com.unity.2d.aseprite
   name: com.unity.2d.aseprite
   displayName: 2D Aseprite Importer
@@ -5432,6 +5444,8 @@ m_ResolvedPackages:
     - 2.0.1
     - 2.0.2
     - 3.0.0
+    - 3.0.1
+    - 4.0.0
     compatible:
     - 2.0.1
     - 2.0.2
@@ -5538,7 +5552,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 11.0.1
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.2d.common@dd402daace1b
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.2d.common@dd402daace1b
   assetPath: Packages/com.unity.2d.common
   name: com.unity.2d.common
   displayName: 2D Common
@@ -5622,6 +5636,8 @@ m_ResolvedPackages:
     - 11.0.0
     - 11.0.1
     - 12.0.0
+    - 12.0.1
+    - 13.0.0
     compatible:
     - 11.0.1
     recommended: 11.0.1
@@ -5714,7 +5730,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.mathematics@8017b507cc74
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.mathematics@8017b507cc74
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -5815,7 +5831,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.7
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.collections@d49facba0036
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.collections@d49facba0036
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -6007,7 +6023,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.23
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.burst@6aff1dd08a0c
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.burst@6aff1dd08a0c
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -6240,7 +6256,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.5
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.nuget.mono-cecil@d78732e851eb
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -6335,7 +6351,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.1.0
   source: 1
-  resolvedPath: C:\Unity Projects\The Trials\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
+  resolvedPath: E:\F25 Git\Infinite-Dungeon-Survival\The Trials\Library\PackageCache\com.unity.test-framework.performance@92d1d09a72ed
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API

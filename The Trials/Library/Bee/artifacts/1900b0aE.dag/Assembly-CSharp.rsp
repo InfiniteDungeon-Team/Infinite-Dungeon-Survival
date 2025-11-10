@@ -437,8 +437,11 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.0f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/Arrow.cs"
 "Assets/Scripts/ArrowPool.cs"
+"Assets/Scripts/Enemy.cs"
+"Assets/Scripts/EnemyPool.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/ShootArrow.cs"
+"Assets/Scripts/SpawnEnemy.cs"
 -langversion:9.0
 /deterministic
 /optimize+
