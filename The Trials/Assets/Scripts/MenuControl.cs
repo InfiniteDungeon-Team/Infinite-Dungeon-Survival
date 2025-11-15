@@ -1,16 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro; // text mesh pro
 
 
 public class MenuControl : MonoBehaviour
 {
 
    [Header("Volume Setting")] 
-   [SerializeField] private Text volumeTextValue = null;
+   [SerializeField] private TMP_Text volumeTextValue = null;
    [SerializeField] private Slider volumeSlider = null;
 
-   [SerializeField] private GameObject confirmation
+   [SerializeField] private GameObject confirmationPrompt = null; // prompt to show when settings are applied
 
    [Header("Levels To Load")]
    public string _newGameLevel1; // load/create new game
@@ -40,16 +43,17 @@ public class MenuControl : MonoBehaviour
     Application.Quit(); // quit the application
    }
 
-   public void SetVolume(float volume)
+   public void SetVolume(float volume) 
    {
-      AudioListener.volume = volume;
-      volumeTextValue.text = volume.ToString("0.0";)
+      AudioListener.volume = volume; 
+      volumeTextValue.text = volume.ToString("0.0"); 
    }
 
-   public void VolumeApple()
+   public void VolumeApply()
    {
       PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
       // show Prompt 
+      StartCoroutine(ConfirmationBox());// start the confirmation box coroutine
    }
 
    public IEnumerator ConfirmationBox()
@@ -57,6 +61,6 @@ public class MenuControl : MonoBehaviour
       confirmationPrompt.SetActive(true);
       yield return new WaitForSeconds(2);
       confirmationPrompt.SetActive(false);
-   }
+     }
    
    }
