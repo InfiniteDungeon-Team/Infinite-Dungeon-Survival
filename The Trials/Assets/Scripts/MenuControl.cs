@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuControl : MonoBehaviour
 {
+
+   [Header("Volume Setting")] 
+   [SerializeField] private Text volumeTextValue = null;
+   [SerializeField] private Slider volumeSlider = null;
+
+   [SerializeField] private GameObject confirmation
+
    [Header("Levels To Load")]
    public string _newGameLevel1; // load/create new game
    private string levelToLoad; // load level when needed
@@ -32,4 +39,24 @@ public class MenuControl : MonoBehaviour
    {
     Application.Quit(); // quit the application
    }
-}
+
+   public void SetVolume(float volume)
+   {
+      AudioListener.volume = volume;
+      volumeTextValue.text = volume.ToString("0.0";)
+   }
+
+   public void VolumeApple()
+   {
+      PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+      // show Prompt 
+   }
+
+   public IEnumerator ConfirmationBox()
+   {
+      confirmationPrompt.SetActive(true);
+      yield return new WaitForSeconds(2);
+      confirmationPrompt.SetActive(false);
+   }
+   
+   }
