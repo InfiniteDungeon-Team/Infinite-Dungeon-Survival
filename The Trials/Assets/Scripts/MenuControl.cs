@@ -12,6 +12,7 @@ public class MenuControl : MonoBehaviour
    [Header("Volume Setting")] 
    [SerializeField] private TMP_Text volumeTextValue = null;
    [SerializeField] private Slider volumeSlider = null;
+   [SerializeField] private float defaultVolume = 1.0f;
 
    [SerializeField] private GameObject confirmationPrompt = null; // prompt to show when settings are applied
 
@@ -38,22 +39,33 @@ public class MenuControl : MonoBehaviour
      }
    }
 
-   public void ExitButton()
+   public void ExitButton() // exit the game
    {
     Application.Quit(); // quit the application
    }
 
-   public void SetVolume(float volume) 
+   public void SetVolume(float volume) // set the volume based on the slider value
    {
-      AudioListener.volume = volume; 
-      volumeTextValue.text = volume.ToString("0.0"); 
+      AudioListener.volume = volume;  // set the audio listener volume
+      volumeTextValue.text = volume.ToString("0.0"); // update the volume text
    }
 
-   public void VolumeApply()
+   public void VolumeApply() // apply the volume settings
    {
-      PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+      PlayerPrefs.SetFloat("masterVolume", AudioListener.volume); // save the volume setting
       // show Prompt 
       StartCoroutine(ConfirmationBox());// start the confirmation box coroutine
+   }
+
+   public void ResetButton(string menuType) // reset settings to default
+   {
+      if (menuType == "Audio") // reset audio settings
+      {
+         AudioListener.volume = defaultVolume;     // reset volume to default
+         volumeSlider.value = defaultVolume;  // reset slider to default
+         volumeTextValue.text = defaultVolume.ToString("0.0");    // reset text to default
+         VolumeApply();                      // apply the changes
+      }
    }
 
    public IEnumerator ConfirmationBox()
