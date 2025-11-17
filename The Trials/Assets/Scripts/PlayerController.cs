@@ -2,37 +2,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-<<<<<<< Updated upstream
-
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private float playerMoveSpeed = 10f;
     [SerializeField] private Rigidbody2D rb;
 
-=======
-    [SerializeField] private Animator animator;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform gun1_transform;
+    [SerializeField] private Transform gun2_transform;
 
-    [SerializeField] PlayerUpgradeManager playerUpgradeManager;
->>>>>>> Stashed changes
-
-    // Shooting stuff
     [SerializeField] private GameObject arrowPoolGO;
     [SerializeField] private float timeBetweenFiring = 0.15f;
-<<<<<<< Updated upstream
-    [SerializeField] private float force = 15f;
-
+    [SerializeField] private float arrowFiringForce = 15f;
 
     [SerializeField] private Transform crosshairTransform;
-    [SerializeField] private float rotationOffset = -90f; // Adjust this based on your sprite's default facing direction
+    [SerializeField] private float rotationOffset = 90f;
 
     // Movement variables
     private Vector2 input;
 
     // Shooting variables
-=======
-    [SerializeField] private float arrowFiringForce = 15f;
-    [SerializeField] private Transform gun1_transform;
-    [SerializeField] private Transform gun2_transform;
->>>>>>> Stashed changes
     private Camera mainCam;
     private Vector3 mousePos;
     private bool canFire = true;
@@ -40,14 +26,6 @@ public class PlayerController : MonoBehaviour
     private int currentArrowNum = 0;
     private GameObject currentArrowGO;
     private int totalNumArrows;
-
-
-    // Crosshair stuff
-    [SerializeField] private Transform crosshairTransform;
-    [SerializeField] private float rotationOffset = 90f;
-
-    // Movement variables
-    private Vector2 input;
 
     private void Awake()
     {
@@ -73,8 +51,6 @@ public class PlayerController : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
         // Rotate the entire player object (including sprite and crosshair)
-        // Subtract 90 degrees if your sprite is facing up in its default state
-        // You may need to adjust this offset based on your sprite's default orientation
         transform.rotation = Quaternion.Euler(0, 0, rotZ + rotationOffset);
 
         // Counter-rotate the crosshair to keep it upright
@@ -90,12 +66,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply movement
-<<<<<<< Updated upstream
-        rb.linearVelocity = input * speed;
-=======
-        //rb.linearVelocity = input * 10;
-        rb.linearVelocity = input * playerUpgradeManager.GetCurrentMoveSpeed();
->>>>>>> Stashed changes
+        rb.linearVelocity = input * playerMoveSpeed;
     }
 
     private void HandleShooting(Vector3 rotation)
@@ -111,32 +82,45 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // Fire arrow on mouse click
+        // Fire arrows on mouse click
         if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
 
-            // Play firing animation
-            animator.SetTrigger("Shoot");
-
             // Get total arrows from pool
             totalNumArrows = arrowPoolGO.transform.childCount;
 
-            // Get next arrow from pool
-            currentArrowGO = arrowPoolGO.transform.GetChild(currentArrowNum).gameObject;
-            currentArrowGO.transform.position = transform.position;
+            // Fire from gun1
+            FireArrowFromTransform(gun1_transform, rotation);
 
-            // Add velocity to arrow
-            Rigidbody2D rb2d = currentArrowGO.GetComponent<Rigidbody2D>();
-            Vector3 direction = mousePos - transform.position;
-            rb2d.linearVelocity = new Vector2(direction.x, direction.y).normalized * force;
-
-            // Rotate arrow to face firing direction
-            float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-            currentArrowGO.transform.rotation = Quaternion.Euler(0, 0, rot);
-
-            // Cycle to next arrow in pool
-            currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
+            // Fire from gun2
+            FireArrowFromTransform(gun2_transform, rotation);
         }
+    }
+
+    private void FireArrowFromTransform(Transform gunTransform, Vector3 rotation)
+    {
+        // Make sure we have arrows in the pool
+        if (currentArrowNum >= totalNumArrows)
+        {
+            Debug.LogWarning("Not enough arrows in pool!");
+            return;
+        }
+
+        // Get next arrow from pool
+        currentArrowGO = arrowPoolGO.transform.GetChild(currentArrowNum).gameObject;
+        currentArrowGO.transform.position = gunTransform.position;
+
+        // Add velocity to arrow
+        Rigidbody2D rb2d = currentArrowGO.GetComponent<Rigidbody2D>();
+        Vector3 direction = mousePos - transform.position;
+        rb2d.linearVelocity = new Vector2(direction.x, direction.y).normalized * arrowFiringForce;
+
+        // Rotate arrow to face firing direction
+        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        currentArrowGO.transform.rotation = Quaternion.Euler(0, 0, rot);
+
+        // Cycle to next arrow in pool
+        currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
     }
 }
