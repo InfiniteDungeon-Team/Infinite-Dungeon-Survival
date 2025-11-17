@@ -2,13 +2,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< Updated upstream
 
     [SerializeField] private float speed = 10f;
     [SerializeField] private Rigidbody2D rb;
 
+=======
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody2D rb;
 
+    [SerializeField] PlayerUpgradeManager playerUpgradeManager;
+>>>>>>> Stashed changes
+
+    // Shooting stuff
     [SerializeField] private GameObject arrowPoolGO;
     [SerializeField] private float timeBetweenFiring = 0.15f;
+<<<<<<< Updated upstream
     [SerializeField] private float force = 15f;
 
 
@@ -19,6 +28,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 input;
 
     // Shooting variables
+=======
+    [SerializeField] private float arrowFiringForce = 15f;
+    [SerializeField] private Transform gun1_transform;
+    [SerializeField] private Transform gun2_transform;
+>>>>>>> Stashed changes
     private Camera mainCam;
     private Vector3 mousePos;
     private bool canFire = true;
@@ -26,6 +40,14 @@ public class PlayerController : MonoBehaviour
     private int currentArrowNum = 0;
     private GameObject currentArrowGO;
     private int totalNumArrows;
+
+
+    // Crosshair stuff
+    [SerializeField] private Transform crosshairTransform;
+    [SerializeField] private float rotationOffset = 90f;
+
+    // Movement variables
+    private Vector2 input;
 
     private void Awake()
     {
@@ -68,7 +90,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply movement
+<<<<<<< Updated upstream
         rb.linearVelocity = input * speed;
+=======
+        //rb.linearVelocity = input * 10;
+        rb.linearVelocity = input * playerUpgradeManager.GetCurrentMoveSpeed();
+>>>>>>> Stashed changes
     }
 
     private void HandleShooting(Vector3 rotation)
@@ -88,6 +115,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canFire)
         {
             canFire = false;
+
+            // Play firing animation
+            animator.SetTrigger("Shoot");
 
             // Get total arrows from pool
             totalNumArrows = arrowPoolGO.transform.childCount;
