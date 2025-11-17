@@ -101,3 +101,5 @@ Library/
 The Trials/Library/
 .DS_Store
 Documents/.DS_Store
+The Trials/Temp/UnityLockfile
+*.gbc
