@@ -128,7 +128,7 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator RespawnCoolDown()
     {
-        yield return new WaitForSeconds(Random.Range(2f, 5f));
+        yield return new WaitForSeconds(Random.Range(1f, 3f));
         
 
         Vector2 respawnLocation = new Vector2(Random.Range(-6.5f, 6.5f), Random.Range(-6.5f, 6.5f)); // respawn somewhere in the arena
