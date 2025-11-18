@@ -179,21 +179,44 @@ public class MenuController : MonoBehaviour
       if (MenuType == "Graphics") 
       {
          //Reset brightness value 
-         brightnessSlider.value = defaultBrightness; // reset slider to default
-         brightnessTextValue.text = defaultBrightness.ToString("0.0"); // reset text to
+         if (resolutions == null || resolutions.Length == 0)
+        {
+            resolutions = Screen.resolutions;
+        }
 
-         qualityDropdown.value = 1; 
-         QualitySettings.SetQualityLevel(1); // reset quality to default
+        // Reset brightness value
+        brightnessSlider.value = defaultBrightness;              // reset slider to default
+        brightnessTextValue.text = defaultBrightness.ToString("0.0"); // reset text to default
 
-         fullScreenToggle.isOn = false; // reset fullscreen to default
-         Screen.fullScreen = false; // apply fullscreen setting
+        qualityDropdown.value = 1;
+        QualitySettings.SetQualityLevel(1);                      // reset quality to default
 
+        fullScreenToggle.isOn = false;                           // reset fullscreen to default
+        Screen.fullScreen = false;                               // apply fullscreen setting
 
-         Resolution currentResolution = Screen.currentResolution; // get current resolution
-         Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen); // reset to current resolution
-         resolutionDropdown.value = resolutions.Length; 
-         GraphicsApply(); // apply the changes
-      }
+        // set resolution to current screen resolution
+        Resolution currentResolution = Screen.currentResolution;
+        Screen.SetResolution(currentResolution.width, currentResolution.height, Screen.fullScreen);
+
+        // find index of the current resolution in the array
+        int currentResolutionIndex = 0;
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            if (resolutions[i].width == currentResolution.width &&
+                resolutions[i].height == currentResolution.height)
+            {
+                currentResolutionIndex = i;
+                break;
+            }
+        }
+
+        // update dropdown to match that index
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+	
+	GraphicsApply(); 
+}
+     
 
 
       if (MenuType == "Audio") // reset audio settings
