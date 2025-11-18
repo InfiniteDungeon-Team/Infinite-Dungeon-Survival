@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.2d.pixel-perfect": "5.1.1",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.multiplayer.center": "1.0.0",
     "com.unity.probuilder": "6.0.7",
