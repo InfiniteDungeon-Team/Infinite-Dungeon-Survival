@@ -43,7 +43,7 @@ public class MenuController : MonoBehaviour
    [SerializeField] private GameObject confirmationPrompt = null; // prompt to show when settings are applied
 
    [Header("Levels To Load")]
-   public string _newGameLevel1; // load/create new game
+   public string _newGameLevel;   // load/create new game
    private string levelToLoad; // load level when needed
    [SerializeField] private GameObject noSavedGameDialog = null; // dialog to show if no saved game exists
 
