@@ -17,7 +17,7 @@ public class MenuController : MonoBehaviour
 
 
    [Header("Gameplay Settings")]
-   [SerializeField] private TMP_Text ControllerSenTextValue = null; //
+   [SerializeField] private TMP_Text controllerSenTextValue = null; //
    [SerializeField] private Slider controllerSenSlider = null;
    [SerializeField] private int defaultSen = 4;
    public int mainControllerSen = 4; // 
@@ -123,7 +123,7 @@ public class MenuController : MonoBehaviour
    public void SetControllerSen(float sensitivity)
    {
       mainControllerSen = Mathf.RoundToInt(sensitivity);
-      ControllerSenTextValue.text = sensitivity.ToString("0");
+      controllerSenTextValue.text = sensitivity.ToString("0");
    }
  
    public void GameplayApply() 
@@ -229,7 +229,7 @@ public class MenuController : MonoBehaviour
 
       if (MenuType == "Gameplay")
       {
-         ControllerSenTextValue.text = defaultSen.ToString("0"); // reset sensitivity text to default
+         controllerSenTextValue.text = defaultSen.ToString("0"); // reset sensitivity text to default
          controllerSenSlider.value = defaultSen; // reset slider to default
          mainControllerSen = defaultSen; // reset main sensitivity to default
          invertYToggle.isOn = false; // reset invert Y toggle to default
