@@ -86,7 +86,7 @@ public class MenuController : MonoBehaviour
 
    public void NewGameDialogYes() 
    {
-    SceneManager.LoadScene(_newGameLevel1);
+    SceneManager.LoadScene(_newGameLevel);
    }
 
    public void LoadGameDialogYes() // if we choose to load a saved game
