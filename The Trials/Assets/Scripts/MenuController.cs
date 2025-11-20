@@ -150,7 +150,7 @@ public class MenuController : MonoBehaviour
       // Here you would typically apply the brightness to the game's lighting or post-processing settings
    }
 
-   public void setFullScreen(bool isFullScreen) // set fullscreen mode
+   public void SetFullScreen(bool isFullScreen) // set fullscreen mode
    {
       _isFullScreen = isFullScreen;
    }
