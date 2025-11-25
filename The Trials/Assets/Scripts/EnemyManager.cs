@@ -9,16 +9,10 @@ public class EnemyManager : MonoBehaviour
     // Enemy Pool
     [SerializeField] GameObject enemyPool;
 
-    // Enemy Spawn Locations
-    [SerializeField] GameObject enemySpawn_N;
-    [SerializeField] GameObject enemySpawn_E;
-    [SerializeField] GameObject enemySpawn_S;
-    [SerializeField] GameObject enemySpawn_W;
-
     // Base Enemy Stats
     private float baseEnemyHP = 10;
-    private float baseEnemyDamage = 1;
-    private float baseEnemyMoveSpeed = 1;
+    private int baseEnemyDamage = 1;
+    private float baseEnemyMoveSpeed = 2;
 
 
     // Enemy Stat Multipliers
@@ -31,9 +25,11 @@ public class EnemyManager : MonoBehaviour
         return baseEnemyHP * Mathf.Pow(enemyHPMultiplier, waveManager.GetCurrentWaveID() - 1);
     }
 
-    public float GetCurrentDamage()
+    public int GetCurrentDamage()
     {
-        return baseEnemyDamage * Mathf.Pow(enemyDamageMultiplier, waveManager.GetCurrentWaveID() - 1);
+        // Scale base damage and round the final result to int
+        float scaledDamage = baseEnemyDamage * Mathf.Pow(enemyDamageMultiplier, waveManager.GetCurrentWaveID() - 1);
+        return Mathf.RoundToInt(scaledDamage);
     }
 
     public float GetCurrentMoveSpeed()
