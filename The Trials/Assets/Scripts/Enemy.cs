@@ -8,6 +8,9 @@ public class Enemy : MonoBehaviour
     Rigidbody2D rb;
     Transform target;
     Vector2 moveDirection;
+    [SerializeField] Animator animator;
+
+    private bool stoppedOnHit = false;
 
     // When true, the enemy is active in the level and moving/attacking the player
     [SerializeField] private bool spawnedAndActive = false;
@@ -26,6 +29,8 @@ public class Enemy : MonoBehaviour
 
     // Use a different name so we don't hide Component.camera
     [SerializeField] private Camera enemyCamera;
+
+    [SerializeField] WaveManager waveManager;
 
     private void Awake()
     {
@@ -48,21 +53,41 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        // only move to play if they're alive
+        if (playerUpgradeManager.GetIsDead() == true)
+        {
+            SetIsSpawnedAndActive(false);
+            return;
+        }
+        
+        
         if (target && spawnedAndActive)
         {
             Vector3 direction = (target.position - transform.position).normalized;
             moveDirection = direction;
 
-            // Make the enemy's "up" direction point at the player
+            // make the enemy's "up" direction point at the player
             transform.up = -moveDirection;
         }
     }
 
     private void FixedUpdate()
     {
-        if (target && spawnedAndActive)
+        // If the enemy is not active in the arena, stop their movement
+        if (!spawnedAndActive)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        // if it has a target to move towards, apply the movement
+        if (target && !stoppedOnHit)
         {
             rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * enemyManager.GetCurrentMoveSpeed();
+        }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
@@ -86,13 +111,13 @@ public class Enemy : MonoBehaviour
             if (currentEnemyHP > 0)
             {
                 TakeDamage();
+                if (!stoppedOnHit && this.isActiveAndEnabled)
+                {
+                    stoppedOnHit = true;
+                    StartCoroutine(StopOnHit());
+                }
             }
         }
-    }
-
-    public void SetIsSpawnedAndActive(bool _bool)
-    {
-        spawnedAndActive = _bool;
     }
 
     public void StopMovement()
@@ -112,8 +137,7 @@ public class Enemy : MonoBehaviour
     private void TakeDamage()
     {
         currentEnemyHP -= playerUpgradeManager.GetCurrentDamage();
-        Debug.Log($"Ow! You shot me. I have {currentEnemyHP} / {enemyManager.GetCurrentMaxHP()} HP remaining!");
-
+        Debug.Log($"{this.gameObject.name}: I took {playerUpgradeManager.GetCurrentDamage()} damage. I have {this.currentEnemyHP} / {enemyManager.GetCurrentMaxHP()} HP.");
         if (currentEnemyHP <= 0)
         {
             EnemyDeath();
@@ -122,12 +146,17 @@ public class Enemy : MonoBehaviour
         UpdateHealthBar(currentEnemyHP, enemyManager.GetCurrentMaxHP());
     }
 
-    private void EnemyDeath()
+    public void EnemyDeath()
     {
         StopMovement();
         SetIsSpawnedAndActive(false);
-        transform.position = new Vector2(0, -9999); // when hit, move the enemy out of sight of player
-        StartCoroutine(RespawnCoolDown());
+        animator.SetTrigger("Death");
+    }
+
+    public void OnDeathAnimationComplete()
+    {
+        transform.position = new Vector2(0, -9999); // when killed, move the enemy out of sight of player
+        this.gameObject.SetActive(false); // disable the gameobject
     }
 
     private void UpdateHealthBar(float currentHealth, float maxHealth)
@@ -137,14 +166,19 @@ public class Enemy : MonoBehaviour
             enemyHealthBarSlider.value = currentHealth / maxHealth;
         }
     }
-
-    private IEnumerator RespawnCoolDown()
+    private IEnumerator StopOnHit()
     {
-        yield return new WaitForSeconds(Random.Range(1f, 3f));
+        StopMovement();
+        yield return new WaitForSeconds(0.10f);
+        stoppedOnHit = false;
+    }
 
-        Vector2 respawnLocation = new Vector2(Random.Range(-6.5f, 6.5f), Random.Range(-6.5f, 6.5f)); // respawn somewhere in the arena
-        transform.position = respawnLocation;
-        ResetEnemyStats();
-        SetIsSpawnedAndActive(true);
+    public bool GetSpawnedAndActiveState()
+    {
+        return spawnedAndActive;
+    }
+    public void SetIsSpawnedAndActive(bool _bool)
+    {
+        spawnedAndActive = _bool;
     }
 }

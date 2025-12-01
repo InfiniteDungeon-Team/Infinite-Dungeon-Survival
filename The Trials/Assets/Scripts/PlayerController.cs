@@ -1,26 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float playerMoveSpeed = 10f;
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
-    [SerializeField] private Transform gun1_transform;
-    [SerializeField] private Transform gun2_transform;
+    [SerializeField] PlayerUpgradeManager playerUpgradeManager;
+    [SerializeField] EnemyManager enemyManager;
+    [SerializeField] WaveManager waveManager;
 
+    // Shooting stuff
     [SerializeField] private GameObject arrowPoolGO;
     [SerializeField] private float timeBetweenFiring = 0.15f;
     [SerializeField] private float arrowFiringForce = 15f;
-
-    [SerializeField] private Transform crosshairTransform;
-    [SerializeField] private float rotationOffset = 90f;
-
-    // Movement variables
-    private Vector2 input;
-
-    // Shooting variables
+    [SerializeField] private Transform gun1_transform;
+    [SerializeField] private Transform gun2_transform;
     private Camera mainCam;
     private Vector3 mousePos;
     private bool canFire = true;
@@ -28,6 +27,18 @@ public class PlayerController : MonoBehaviour
     private int currentArrowNum = 0;
     private GameObject currentArrowGO;
     private int totalNumArrows;
+
+
+    // Crosshair stuff
+    [SerializeField] private Transform crosshairTransform;
+    [SerializeField] private float rotationOffset = 90f;
+
+    // Movement variables
+    private Vector2 input;
+    [SerializeField] private bool canMove = true;
+
+    // Take Damage
+    private bool inIFrames = false;
 
     private void Awake()
     {
@@ -42,6 +53,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!canMove) return;
+
         // Handle movement input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
@@ -68,7 +81,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Apply movement
-        rb.linearVelocity = input * playerMoveSpeed;
+        if(canMove)
+            rb.linearVelocity = input * playerUpgradeManager.GetCurrentMoveSpeed();
+        else
+            StopMovement();
     }
 
     private void HandleShooting(Vector3 rotation)
@@ -79,7 +95,7 @@ public class PlayerController : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > timeBetweenFiring)
             {
-                canFire = true;
+                SetCanFire(true);
                 timer = 0;
             }
         }
@@ -87,7 +103,10 @@ public class PlayerController : MonoBehaviour
         // Fire arrows on mouse click
         if (Input.GetMouseButtonDown(0) && canFire)
         {
-            canFire = false;
+            SetCanFire(false);
+
+            // Play firing animation
+            animator.SetTrigger("Shoot");
 
             // Get total arrows from pool
             totalNumArrows = arrowPoolGO.transform.childCount;
@@ -124,5 +143,120 @@ public class PlayerController : MonoBehaviour
 
         // Cycle to next arrow in pool
         currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // for inital enemy collision
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // don't take damage if a wave is not currently active
+            if (!waveManager.WaveIsActive) return;
+
+            // only process enemy damage if player health > 0
+            if (playerUpgradeManager.GetCurrentHP() <= 0) return;
+
+            if (!inIFrames)
+            {
+                // Camera Shake to show hit
+                CameraShake.Instance.Shake(0.05f, 0.10f);
+
+                // Run hit animation & iFrames
+                StartCoroutine(PlayerHitIFrames());
+
+                // Take Damage
+                TakeDamage(-enemyManager.GetCurrentDamage());
+            }
+        }
+    }
+
+    // for if enemies are still colliding after initial
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // don't take damage if a wave is not currently active
+            if (!waveManager.WaveIsActive) return;
+
+            // only process enemy damage if player health > 0
+            if (playerUpgradeManager.GetCurrentHP() <= 0) return;
+
+            if (!inIFrames)
+            {
+                // Camera Shake to show hit
+                CameraShake.Instance.Shake(0.05f, 0.10f);
+
+                // Run hit animation & iFrames
+                StartCoroutine(PlayerHitIFrames());
+
+                // Take Damage
+                TakeDamage(-enemyManager.GetCurrentDamage());
+            }
+        }
+    }
+
+    private void TakeDamage(int damageTaken)
+    {
+        playerUpgradeManager.SetPlayerCurrentHP(damageTaken);
+
+        // trigger player death if health is <= 0 after taking damage
+        if(playerUpgradeManager.GetIsDead() == true)
+            PlayerDeath();
+    }
+
+    private void PlayerDeath()
+    {
+        animator.SetBool("Dead", true);
+        SetCanMove(false);
+        SetCanFire(false);
+
+        // reset the player's rotation to face down
+        transform.rotation = Quaternion.identity;
+    }
+
+    IEnumerator PlayerHitIFrames()
+    {
+        inIFrames = true;
+        int numFlashes = 8;
+
+        for (int i = 0; i < numFlashes; i++)
+        {
+            spriteRenderer.color = new Color(1, 0, 0, 1);
+            yield return new WaitForSeconds(0.15f);
+            spriteRenderer.color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(0.15f);
+        }
+
+        inIFrames = false;
+    }
+
+    public void SetCanMove(bool _canMove)
+    {
+        canMove = _canMove;
+    }
+
+    public void SetCanFire(bool _canFire)
+    {
+        canFire = _canFire;
+    }
+    public void StopMovement()
+    {
+        rb.linearVelocity = Vector2.zero;
+        rb.freezeRotation = true;
+    }
+
+    public void WaveStartBehaviors()
+    {
+        SetCanFire(true);
+        SetCanMove(true);
+        rb.freezeRotation = false;
+    }
+    public void WaveStopBehaviors()
+    {
+        SetCanFire(false);
+        SetCanMove(false);
+        StopMovement();
+        rb.freezeRotation = true;
     }
 }
