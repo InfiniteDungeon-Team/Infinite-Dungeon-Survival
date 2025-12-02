@@ -16,17 +16,21 @@ public class PlayerController : MonoBehaviour
 
     // Shooting stuff
     [SerializeField] private GameObject arrowPoolGO;
-    [SerializeField] private float timeBetweenFiring = 0.15f;
     [SerializeField] private float arrowFiringForce = 15f;
     [SerializeField] private Transform gun1_transform;
     [SerializeField] private Transform gun2_transform;
     private Camera mainCam;
     private Vector3 mousePos;
     private bool canFire = true;
-    private float timer;
+    public bool canFireSpecial { get; private set; } = true;
     private int currentArrowNum = 0;
     private GameObject currentArrowGO;
     private int totalNumArrows;
+    private int shotsRemaining;
+    private bool isReloading = false;
+    [SerializeField] GameObject reloadBar;
+    [SerializeField] Transform reloadBarTransform;
+
 
 
     // Crosshair stuff
@@ -49,6 +53,9 @@ public class PlayerController : MonoBehaviour
         {
             crosshairTransform = transform.GetChild(0);
         }
+
+        shotsRemaining = playerUpgradeManager.GetCurrentPlayerMagazineSize();
+        reloadBar.SetActive(false);
     }
 
     void Update()
@@ -76,6 +83,7 @@ public class PlayerController : MonoBehaviour
 
         // Handle shooting
         HandleShooting(rotation);
+        HandleSpecialAttack();
     }
 
     private void FixedUpdate()
@@ -89,22 +97,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleShooting(Vector3 rotation)
     {
-        // Update firing timer
-        if (!canFire)
-        {
-            timer += Time.deltaTime;
-            if (timer > timeBetweenFiring)
-            {
-                SetCanFire(true);
-                timer = 0;
-            }
-        }
+        // Don't shoot if player is reloading
+        if (isReloading)
+            return;
 
         // Fire arrows on mouse click
         if (Input.GetMouseButtonDown(0) && canFire)
         {
-            SetCanFire(false);
-
             // Play firing animation
             animator.SetTrigger("Shoot");
 
@@ -116,6 +115,34 @@ public class PlayerController : MonoBehaviour
 
             // Fire from gun2
             FireArrowFromTransform(gun2_transform, rotation);
+
+            // decrement bullets left in magazine, and begin reload sequence if <= 0
+            shotsRemaining--;
+            //Debug.Log($"Bullets Left: {shotsRemaining} / {playerUpgradeManager.GetCurrentPlayerMagazineSize()}");
+
+            if (shotsRemaining <= 0)
+            {
+                isReloading = true;
+                StartCoroutine(ReloadSequence());
+            }
+        }
+    }
+
+    private void HandleSpecialAttack()
+    {
+        // Fire special on spacebar
+        if (Input.GetKeyDown(KeyCode.Space) && canFireSpecial)
+        {
+            // Disable special attack and start its cooldown
+            SetCanFireSpecial(false);
+            StartCoroutine(SpecialAttackSequence(playerUpgradeManager.GetCurrentPlayerSpecialAttacks()));
+
+
+            // Play firing animation
+            animator.SetTrigger("Shoot");
+
+            // Get total arrows from pool
+            totalNumArrows = arrowPoolGO.transform.childCount;
         }
     }
 
@@ -128,7 +155,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // Get next arrow from pool
+        // get next arrow from pool
         currentArrowGO = arrowPoolGO.transform.GetChild(currentArrowNum).gameObject;
         currentArrowGO.transform.position = gunTransform.position;
 
@@ -137,11 +164,11 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = mousePos - transform.position;
         rb2d.linearVelocity = new Vector2(direction.x, direction.y).normalized * arrowFiringForce;
 
-        // Rotate arrow to face firing direction
+        // rotate arrow to face firing direction
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         currentArrowGO.transform.rotation = Quaternion.Euler(0, 0, rot);
 
-        // Cycle to next arrow in pool
+        // cycle to next arrow in pool
         currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
     }
 
@@ -168,6 +195,20 @@ public class PlayerController : MonoBehaviour
                 // Take Damage
                 TakeDamage(-enemyManager.GetCurrentDamage());
             }
+        }
+
+        // for healthpack pickup
+        if (collision.gameObject.CompareTag("Healthpack"))
+        {
+            HealthPack healthPack = collision.GetComponent<HealthPack>();
+
+            if (!healthPack.healthpackPickedUp)
+            {
+                Debug.Log($"Player healed for {playerUpgradeManager.GetCurrentPlayerHealAmount()} HP!");
+                collision.GetComponent<HealthPack>().Reset();
+                playerUpgradeManager.SetPlayerCurrentHP(playerUpgradeManager.GetCurrentPlayerHealAmount());
+            }
+
         }
     }
 
@@ -215,6 +256,40 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.identity;
     }
 
+    IEnumerator ReloadSequence()
+    {
+        // reset the bar to the beginning
+        reloadBar.SetActive(true);
+        reloadBarTransform.localScale = new Vector2(1, 10);
+
+        // play reloading animation
+        float elapsed = 0f;
+        Vector3 startScale = reloadBarTransform.localScale;
+        float reloadTime = playerUpgradeManager.GetCurrentPlayerReloadSpeed();
+        float targetScaleX = 60f;
+
+        // scale the reload bar over the duration of player's reload time
+        while (elapsed < reloadTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / reloadTime);
+
+            float newX = Mathf.Lerp(startScale.x, targetScaleX, t);
+            reloadBarTransform.localScale = new Vector3(newX, startScale.y, startScale.z);
+
+            yield return null;
+        }
+        // snap exactly to the target scale (60 on the x axis) at the end of the reload animation
+        reloadBarTransform.localScale = new Vector3(targetScaleX, startScale.y, startScale.z);
+
+        reloadBar.SetActive(false);
+
+
+        // give the player a full magazine and allow them to shoot again
+        shotsRemaining = playerUpgradeManager.GetCurrentPlayerMagazineSize();
+        isReloading = false;
+    }
+
     IEnumerator PlayerHitIFrames()
     {
         inIFrames = true;
@@ -240,6 +315,11 @@ public class PlayerController : MonoBehaviour
     {
         canFire = _canFire;
     }
+
+    public void SetCanFireSpecial(bool _canFireSpecial)
+    {
+        canFireSpecial = _canFireSpecial;
+    }
     public void StopMovement()
     {
         rb.linearVelocity = Vector2.zero;
@@ -258,5 +338,96 @@ public class PlayerController : MonoBehaviour
         SetCanMove(false);
         StopMovement();
         rb.freezeRotation = true;
+    }
+
+    public void SpecialAttack(float startingAngle)
+    {
+        // to rotate each shot 45 degrees from the previous
+        float angleOffset = startingAngle;
+
+        for (int i = 0; i < 8; i++)
+        {
+            // Get arrow from pool
+            GameObject bullet = arrowPoolGO.transform.GetChild(currentArrowNum).gameObject;
+
+            // Set arrow position to player
+            bullet.transform.position = transform.position;
+            bullet.SetActive(true);
+
+            // Calculate direction from angle
+            float angle = i * angleOffset;
+            Vector2 dir = new Vector2(
+                Mathf.Cos(angle * Mathf.Deg2Rad),
+                Mathf.Sin(angle * Mathf.Deg2Rad)
+            ).normalized;
+
+            // Set rotation so arrow faces the direction
+            bullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+            // Apply velocity
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = dir * arrowFiringForce;
+
+            // Cycle to next arrow in pool
+            currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
+        }
+
+    }
+
+    // amount of time that needs to pass before the special attack can be used again
+    IEnumerator SpecialCooldown()
+    {
+        yield return new WaitForSeconds(10f);
+        SetCanFireSpecial(true);
+    }
+
+    private void FireEightWayBurst(float startingAngle)
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            // for each bullet spawn, rotate its angle by 45deg from the starting angle
+            float angle = startingAngle + (45f * i);
+
+            // get the next bullet from the pool, move it to the player, set it as active
+            GameObject bullet = arrowPoolGO.transform.GetChild(currentArrowNum).gameObject;
+            bullet.transform.position = transform.position;
+            bullet.SetActive(true);
+
+            // get a vector2 direction to fire the arrow from the calculated angle
+            Vector2 dir = new Vector2(
+                Mathf.Cos(angle * Mathf.Deg2Rad),
+                Mathf.Sin(angle * Mathf.Deg2Rad)
+            ).normalized;
+
+            // rotate the bullet game object to face the direction it is moving
+            bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            // get the bullet's rb and apply velocity in the calculated direction
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = dir * arrowFiringForce;
+
+            // get the next arrow from the pool
+            currentArrowNum = (currentArrowNum + 1) % totalNumArrows;
+        }
+    }
+    private IEnumerator SpecialAttackSequence(int playerSpecialAttacks)
+    {
+        // start cooldown immediately to account for longer, upgraded, special attacks
+        StartCoroutine(SpecialCooldown());
+
+        totalNumArrows = arrowPoolGO.transform.childCount;
+        float angle1 = 45f;
+        float angle2 = 67.5f;
+        float angleToShoot;
+
+        for (int i = 0; i < playerSpecialAttacks; i++)
+        {
+            if (i % 2 != 0)
+                angleToShoot = angle1;
+            else
+                angleToShoot = angle2;
+            FireEightWayBurst(angleToShoot);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 }

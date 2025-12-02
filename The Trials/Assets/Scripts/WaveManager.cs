@@ -1,13 +1,13 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using TMPro;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
     [SerializeField] PlayerUpgradeManager playerUpgradeManager;
+    [SerializeField] UpgradeMenuManager upgradeMenuManager;
+    [SerializeField] HealthPack healthpack;
 
     [SerializeField] private List<GameObject> activeEnemiesList = new List<GameObject>();
 
@@ -16,13 +16,11 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private int currentWaveID = 1;
     public float waveDuration { get; private set; } = 20f; // the duration of a single wave
     private float baseMin = 1f; // base minimum spawn time between enemy spawns
-    private float baseMax = 2f; // base maximum spawn time between enemy spawns
-    private float decay = 0.92f; // 8% faster each wave
+    private float baseMax = 2.5f; // base maximum spawn time between enemy spawns
+    private float decay = 0.95f; // 5% faster each wave
     private float min; // current minimum spawn time between enemy spawns
     private float max; // current maximum spawn time between enemy spawns
     public bool WaveIsActive { get; private set; }
-
-
 
     // Player Stuff
     [SerializeField] PlayerController playerController;
@@ -54,6 +52,9 @@ public class WaveManager : MonoBehaviour
 
     public void InitiateWaveStart()
     {
+        // Get the player ready to move again
+        playerController.WaveStartBehaviors();
+
         // ****** THIS IS WHAT OFFICIALLY STARTS A WAVE *******
         waveCountdownUI.PlayWaveCountdown();
     }
@@ -62,11 +63,10 @@ public class WaveManager : MonoBehaviour
     {
         SetWaveIsActive(true);
 
+        healthpack.SetDropTime(waveDuration); // set the healthpack to drop at a random time during the wave
+
         // Clear the active enemies list completely for next wave
         activeEnemiesList.Clear();
-
-        // Get the player ready to move again
-        playerController.WaveStartBehaviors();
 
         // Stop any previous wave or timer if they’re still running
         if (waveRoutine != null) StopCoroutine(waveRoutine);
@@ -89,6 +89,7 @@ public class WaveManager : MonoBehaviour
 
             // Assign the next enemy from the pool 
             GameObject currentEnemyGO = enemyPoolGO.transform.GetChild(currentEnemyInPool).gameObject; // get the next enemy in the pool
+            currentEnemyGO.GetComponent<Enemy>().ResetEnemyStats();
 
             // Set its GameObject to active
             currentEnemyGO.SetActive(true); // set the enemy to active
@@ -173,6 +174,7 @@ public class WaveManager : MonoBehaviour
             // Wait before killing the next one
             yield return new WaitForSeconds(0.40f);
         }
+        upgradeMenuManager.InitiateUpgradeMenu();
     }
 
     IEnumerator RunWaveUIElements(float duration)
