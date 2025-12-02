@@ -1,0 +1,305 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj": {}
+  },
+  "projects": {
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj",
+        "projectName": "Unity.2D.Sprite.Editor",
+        "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj",
+        "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+        "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/Unity.2D.Sprite.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj"
+              },
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj"
+              },
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj",
+        "projectName": "UnityEditor.TestRunner",
+        "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj",
+        "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+        "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/UnityEditor.TestRunner/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj",
+        "projectName": "UnityEditor.UI",
+        "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj",
+        "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+        "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/UnityEditor.UI/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.TestRunner.csproj"
+              },
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj"
+              },
+              "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj": {
+                "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj",
+        "projectName": "UnityEngine.TestRunner",
+        "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.TestRunner.csproj",
+        "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+        "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/UnityEngine.TestRunner/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj",
+        "projectName": "UnityEngine.UI",
+        "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj",
+        "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+        "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/UnityEngine.UI/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

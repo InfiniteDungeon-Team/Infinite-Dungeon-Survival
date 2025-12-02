@@ -6,11 +6,10 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
-    public GameObject settingMenu;
 
     private bool isPaused = false;
 
-    public void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -28,38 +27,27 @@ public class PauseMenu : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
-        settingMenu.SetActive(false);
 
         Time.timeScale = 1f;
         isPaused = false;
 
+        Debug.Log("Resumed. timeScale = " + Time.timeScale);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-    } 
-    
-    
+    }
+
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
-        settingMenu.SetActive(false);
-        
-        Time.timeScale = 0;
+
+        Time.timeScale = 0f;
         isPaused = true;
+
+        Debug.Log("Paused. timeScale = " + Time.timeScale);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-    }
-
-    public void OpenSettings()
-    {
-        pauseMenu.SetActive(false);
-        settingMenu.SetActive(true);
-    }
-
-    public void CloseSettings()
-    {
-        settingMenu.SetActive(false);
-        pauseMenu.SetActive(true);
     }
 
     public void QuitGame()
@@ -70,7 +58,8 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadIntoMenu()
     {
-    
+        // Make sure the game isn’t frozen when you load the main menu
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }

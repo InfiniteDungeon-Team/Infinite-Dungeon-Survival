@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Unity.2D.Sprite.AIIntegration.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.2D.Sprite.AIIntegration.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.2D.Sprite.AIIntegration.Editor.dll": {}
+        }
+      },
+      "Unity.2D.Sprite.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.2D.Sprite.Editor.dll": {}
+        }
+      },
+      "Unity.2D.Tilemap.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.2D.Tilemap.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.2D.Tilemap.Editor.dll": {}
+        }
+      },
+      "Unity.Multiplayer.Center.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Multiplayer.Center.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Multiplayer.Center.Common.dll": {}
+        }
+      },
+      "Unity.Multiplayer.Center.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.Multiplayer.Center.Common": "1.0.0",
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.Multiplayer.Center.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.Multiplayer.Center.Editor.dll": {}
+        }
+      },
+      "Unity.PlayerPrefsEditor.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.PlayerPrefsEditor.EditorResources": "1.0.0",
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.Editor.dll": {}
+        }
+      },
+      "Unity.PlayerPrefsEditor.EditorResources/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.EditorResources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.EditorResources.dll": {}
+        }
+      },
+      "Unity.PlayerPrefsEditor.Samples.SampleScene/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.Samples.SampleScene.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.PlayerPrefsEditor.Samples.SampleScene.dll": {}
+        }
+      },
+      "Unity.TextMeshPro/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.TextMeshPro.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.TextMeshPro.dll": {}
+        }
+      },
+      "Unity.TextMeshPro.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.TextMeshPro": "1.0.0",
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEditor.UI": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.TextMeshPro.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.TextMeshPro.Editor.dll": {}
+        }
+      },
+      "UnityEditor.TestRunner/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEngine.TestRunner": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnityEditor.TestRunner.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnityEditor.TestRunner.dll": {}
+        }
+      },
+      "UnityEditor.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "UnityEditor.TestRunner": "1.0.0",
+          "UnityEngine.TestRunner": "1.0.0",
+          "UnityEngine.UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnityEditor.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnityEditor.UI.dll": {}
+        }
+      },
+      "UnityEngine.TestRunner/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/UnityEngine.TestRunner.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnityEngine.TestRunner.dll": {}
+        }
+      },
+      "UnityEngine.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/UnityEngine.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnityEngine.UI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity.2D.Sprite.AIIntegration.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.2D.Sprite.AIIntegration.Editor.csproj",
+      "msbuildProject": "Unity.2D.Sprite.AIIntegration.Editor.csproj"
+    },
+    "Unity.2D.Sprite.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.2D.Sprite.Editor.csproj",
+      "msbuildProject": "Unity.2D.Sprite.Editor.csproj"
+    },
+    "Unity.2D.Tilemap.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.2D.Tilemap.Editor.csproj",
+      "msbuildProject": "Unity.2D.Tilemap.Editor.csproj"
+    },
+    "Unity.Multiplayer.Center.Common/1.0.0": {
+      "type": "project",
+      "path": "Unity.Multiplayer.Center.Common.csproj",
+      "msbuildProject": "Unity.Multiplayer.Center.Common.csproj"
+    },
+    "Unity.Multiplayer.Center.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.Multiplayer.Center.Editor.csproj",
+      "msbuildProject": "Unity.Multiplayer.Center.Editor.csproj"
+    },
+    "Unity.PlayerPrefsEditor.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.PlayerPrefsEditor.Editor.csproj",
+      "msbuildProject": "Unity.PlayerPrefsEditor.Editor.csproj"
+    },
+    "Unity.PlayerPrefsEditor.EditorResources/1.0.0": {
+      "type": "project",
+      "path": "Unity.PlayerPrefsEditor.EditorResources.csproj",
+      "msbuildProject": "Unity.PlayerPrefsEditor.EditorResources.csproj"
+    },
+    "Unity.PlayerPrefsEditor.Samples.SampleScene/1.0.0": {
+      "type": "project",
+      "path": "Unity.PlayerPrefsEditor.Samples.SampleScene.csproj",
+      "msbuildProject": "Unity.PlayerPrefsEditor.Samples.SampleScene.csproj"
+    },
+    "Unity.TextMeshPro/1.0.0": {
+      "type": "project",
+      "path": "Unity.TextMeshPro.csproj",
+      "msbuildProject": "Unity.TextMeshPro.csproj"
+    },
+    "Unity.TextMeshPro.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.TextMeshPro.Editor.csproj",
+      "msbuildProject": "Unity.TextMeshPro.Editor.csproj"
+    },
+    "UnityEditor.TestRunner/1.0.0": {
+      "type": "project",
+      "path": "UnityEditor.TestRunner.csproj",
+      "msbuildProject": "UnityEditor.TestRunner.csproj"
+    },
+    "UnityEditor.UI/1.0.0": {
+      "type": "project",
+      "path": "UnityEditor.UI.csproj",
+      "msbuildProject": "UnityEditor.UI.csproj"
+    },
+    "UnityEngine.TestRunner/1.0.0": {
+      "type": "project",
+      "path": "UnityEngine.TestRunner.csproj",
+      "msbuildProject": "UnityEngine.TestRunner.csproj"
+    },
+    "UnityEngine.UI/1.0.0": {
+      "type": "project",
+      "path": "UnityEngine.UI.csproj",
+      "msbuildProject": "UnityEngine.UI.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Unity.2D.Sprite.AIIntegration.Editor >= 1.0.0",
+      "Unity.2D.Sprite.Editor >= 1.0.0",
+      "Unity.2D.Tilemap.Editor >= 1.0.0",
+      "Unity.Multiplayer.Center.Common >= 1.0.0",
+      "Unity.Multiplayer.Center.Editor >= 1.0.0",
+      "Unity.PlayerPrefsEditor.Editor >= 1.0.0",
+      "Unity.PlayerPrefsEditor.EditorResources >= 1.0.0",
+      "Unity.PlayerPrefsEditor.Samples.SampleScene >= 1.0.0",
+      "Unity.TextMeshPro >= 1.0.0",
+      "Unity.TextMeshPro.Editor >= 1.0.0",
+      "UnityEditor.UI >= 1.0.0",
+      "UnityEngine.UI >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/elliottewideman/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Assembly-CSharp.csproj",
+      "projectName": "Assembly-CSharp",
+      "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Assembly-CSharp.csproj",
+      "packagesPath": "/Users/elliottewideman/.nuget/packages/",
+      "outputPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Temp/obj/Assembly-CSharp/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/elliottewideman/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.AIIntegration.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.AIIntegration.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Sprite.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Tilemap.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.2D.Tilemap.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.Multiplayer.Center.Common.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.Multiplayer.Center.Common.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.Multiplayer.Center.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.Multiplayer.Center.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.EditorResources.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.EditorResources.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.Samples.SampleScene.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.PlayerPrefsEditor.Samples.SampleScene.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.TextMeshPro.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.TextMeshPro.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.TextMeshPro.Editor.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/Unity.TextMeshPro.Editor.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEditor.UI.csproj"
+            },
+            "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj": {
+              "projectPath": "/Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/UnityEngine.UI.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
