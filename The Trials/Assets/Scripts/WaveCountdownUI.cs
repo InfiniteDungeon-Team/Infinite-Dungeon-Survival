@@ -22,7 +22,7 @@ public class WaveCountdownUI : MonoBehaviour
             yield return new WaitForSeconds(1f);
             countdownObjects[i].SetActive(false);
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         waveManager.StartWave(waveManager.waveDuration);
     }
 }

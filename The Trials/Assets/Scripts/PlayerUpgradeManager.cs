@@ -6,21 +6,35 @@ public class PlayerUpgradeManager : MonoBehaviour
 {
     [SerializeField] WaveManager waveManager;
 
+
+
     // Base Player Stats
-    [SerializeField] private float playerBaseHP = 50;
-    [SerializeField] private float playerBaseDamage = 2;
-    [SerializeField] private float playerBaseMoveSpeed = 10;
+    private int playerBaseHP = 5;
+    private float playerBaseDamage = 2;
+    private float playerBaseMoveSpeed = 10;
+    private int playerBaseSpecialAttacks = 1;
+    private int playerBaseMagazineSize = 10;
+    private float playerBaseReloadSpeed = 4f;
+    private int playerBaseHealAmount = 5;
 
     // Player Stat Multipliers
-    [SerializeField] private float playerHPMultiplier = 1.08f;
-    [SerializeField] private float playerDamageMultiplier = 1.08f;
-    [SerializeField] private float playerMoveSpeedMultiplier = 1.01f;
+    private int playerHPMultiplier = 5;
+    private float playerDamageMultiplier = 1.08f;
+    private float playerMoveSpeedMultiplier = 1.01f;
+    private int playerSpecialAttacksModifer = 1;
+    private int playerMagazineSizeModifier = 1;
+    private float playerReloadSpeedModifier = 0.04f;
+    private int playerHealAmountModifier = 2;
 
     // Current Player Stats
-    [SerializeField] private int currentPlayerHP;
-    [SerializeField] private int currentPlayerMaxHP;
-    [SerializeField] private float currentPlayerDamage;
-    [SerializeField] private float currentPlayerMoveSpeed;
+    private int currentPlayerHP;
+    private int currentPlayerMaxHP;
+    private float currentPlayerDamage;
+    private float currentPlayerMoveSpeed;
+    private int currentPlayerSpecialAttacks;
+    private int currentPlayerMagainzeSize;
+    private float currentPlayerReloadSpeed;
+    private int currentPlayerHealAmount;
 
     // Player Health Stuff
     [SerializeField] private TMP_Text playerHealthText;
@@ -36,21 +50,43 @@ public class PlayerUpgradeManager : MonoBehaviour
     // On initial game load this will default to base values
     private void Awake()
     {
-        SetPlayerMaxHP();
-        SetPlayerDamage();
-        SetPlayerMoveSpeed();
-
+        currentPlayerMaxHP = playerBaseHP;
+        currentPlayerDamage = playerBaseDamage;
+        currentPlayerMoveSpeed = playerBaseMoveSpeed;
+        currentPlayerSpecialAttacks = playerBaseSpecialAttacks;
+        currentPlayerMagainzeSize = playerBaseMagazineSize;
+        currentPlayerReloadSpeed = playerBaseReloadSpeed;
         currentPlayerHP = currentPlayerMaxHP;
         SetPlayerCurrentHP(0);
+        currentPlayerHealAmount = playerBaseHealAmount;
     }
 
-    public float GetCurrentMoveSpeed() => currentPlayerMoveSpeed; // Return current player move speed
-    public int GetCurrentHP() => currentPlayerHP; // Return current player HP
-    public float GetCurrentDamage() => currentPlayerDamage; // Return current player damage
+    // getters
+    public float GetCurrentMoveSpeed() => currentPlayerMoveSpeed; // return current player move speed
+    public float GetNextUpgradeMoveSpeed() => playerBaseMoveSpeed * playerMoveSpeedMultiplier; // return next upgrade move speed value
 
+    public int GetCurrentHP() => currentPlayerMaxHP; // return current player HP
+    public int GetNextUpgradeHP() => currentPlayerMaxHP + playerHPMultiplier; // return next upgrade max HP value
+
+    public float GetCurrentDamage() => currentPlayerDamage; // return current player damage
+    public float GetNextUpgradeDamage() => currentPlayerDamage * playerDamageMultiplier; // return next upgrade player damage
+
+    public int GetCurrentPlayerSpecialAttacks() => currentPlayerSpecialAttacks; // return current number of special attacks
+    public int GetNextUpgradePlayerSpecialAttacks() => currentPlayerSpecialAttacks + playerSpecialAttacksModifer;
+
+    public int GetCurrentPlayerMagazineSize() => currentPlayerMagainzeSize; // return current magazine size
+    public int GetNextUpgradePlayerMagazineSize() => currentPlayerMagainzeSize + playerMagazineSizeModifier;
+
+    public float GetCurrentPlayerReloadSpeed() => currentPlayerReloadSpeed; // return current reload speed
+    public float GetNextUpgradePlayerReloadSpeed() => currentPlayerReloadSpeed * (1 - playerReloadSpeedModifier);
+    public int GetCurrentPlayerHealAmount() => currentPlayerHealAmount;
+    public int GetNextPlayerHealAmount() => currentPlayerHealAmount + playerHealAmountModifier;
+
+    // setters
     public void SetPlayerMaxHP()
     {
-        currentPlayerMaxHP = Mathf.RoundToInt(playerBaseHP * Mathf.Pow(playerHPMultiplier, waveManager.GetCurrentWaveID() - 1));
+        currentPlayerMaxHP += playerHPMultiplier;
+        SetPlayerHealthText();
     }
 
     public void SetPlayerCurrentHP(int modifier)
@@ -58,14 +94,13 @@ public class PlayerUpgradeManager : MonoBehaviour
         // only take damage if health > 0
         if (currentPlayerHP <= 0) return;
 
-        int newHP = currentPlayerHP + modifier; // modifier can be negative or positive
-        newHP = Mathf.Clamp(newHP, 0, currentPlayerMaxHP);
-        currentPlayerHP = newHP;
+        int newHP = currentPlayerHP + modifier;
 
-        // Also update the player health HUD text
+        // don't allow currentHP to be less than 0 or greater than MaxHP
+        currentPlayerHP = Mathf.Clamp(newHP, 0, currentPlayerMaxHP);
+
         SetPlayerHealthText();
 
-        // After taking damage, if health <= 0 we want to set death condition
         if (currentPlayerHP <= 0)
         {
             SetIsDead(true);
@@ -74,12 +109,27 @@ public class PlayerUpgradeManager : MonoBehaviour
 
     public void SetPlayerDamage()
     {
-        currentPlayerDamage = playerBaseDamage * Mathf.Pow(playerDamageMultiplier, waveManager.GetCurrentWaveID() - 1);
+        currentPlayerDamage = playerBaseDamage * playerDamageMultiplier;
     }
 
     public void SetPlayerMoveSpeed()
     {
-        currentPlayerMoveSpeed = playerBaseMoveSpeed * Mathf.Pow(playerMoveSpeedMultiplier, waveManager.GetCurrentWaveID() - 1);
+        currentPlayerMoveSpeed = playerBaseMoveSpeed * playerMoveSpeedMultiplier;
+    }
+
+    public void SetPlayerSpecialAttacks()
+    {
+        currentPlayerSpecialAttacks += playerSpecialAttacksModifer;
+    }
+
+    public void SetPlayerMagazineSize()
+    {
+        currentPlayerMagainzeSize += playerMagazineSizeModifier;
+    }
+
+    public void SetPlayerReloadSpeed()
+    {
+        currentPlayerReloadSpeed *= (1 - playerReloadSpeedModifier);
     }
 
     public void SetPlayerHealthText()
@@ -162,5 +212,17 @@ public class PlayerUpgradeManager : MonoBehaviour
     public bool GetIsDead()
     {
         return isDead;
+    }
+
+    public void PrintPlayerUpgrades()
+    {
+        Debug.Log(
+            $"HP: {currentPlayerHP}/{currentPlayerMaxHP} | " +
+            $"DMG: {currentPlayerDamage} | " +
+            $"SPD: {currentPlayerMoveSpeed} | " +
+            $"SPEC: {currentPlayerSpecialAttacks} | " +
+            $"MAG: {currentPlayerMagainzeSize} | " +
+            $"RELOAD: {currentPlayerReloadSpeed}"
+        );
     }
 }

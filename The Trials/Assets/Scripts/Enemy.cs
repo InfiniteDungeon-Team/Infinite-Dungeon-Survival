@@ -126,18 +126,17 @@ public class Enemy : MonoBehaviour
     }
 
     // When an enemy is set active and ready to attack player, update its stats to match the current wave
-    private void ResetEnemyStats()
+    public void ResetEnemyStats()
     {
         currentEnemyHP = enemyManager.GetCurrentMaxHP();
         currentEnemyDamage = enemyManager.GetCurrentDamage();
         currentEnemyMoveSpeed = enemyManager.GetCurrentMoveSpeed();
-        UpdateHealthBar(currentEnemyHP, enemyManager.GetCurrentMaxHP());
     }
 
     private void TakeDamage()
     {
         currentEnemyHP -= playerUpgradeManager.GetCurrentDamage();
-        Debug.Log($"{this.gameObject.name}: I took {playerUpgradeManager.GetCurrentDamage()} damage. I have {this.currentEnemyHP} / {enemyManager.GetCurrentMaxHP()} HP.");
+        //Debug.Log($"{this.gameObject.name}: I took {playerUpgradeManager.GetCurrentDamage()} damage. I have {this.currentEnemyHP} / {enemyManager.GetCurrentMaxHP()} HP.");
         if (currentEnemyHP <= 0)
         {
             EnemyDeath();

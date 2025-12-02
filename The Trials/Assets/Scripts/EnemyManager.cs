@@ -16,8 +16,8 @@ public class EnemyManager : MonoBehaviour
 
 
     // Enemy Stat Multipliers
-    [SerializeField] private float enemyHPMultiplier = 1.08f;
-    [SerializeField] private float enemyDamageMultiplier = 1.08f;
+    [SerializeField] private float enemyHPMultiplier = 1.02f;
+    [SerializeField] private float enemyDamageMultiplier = 1.03f;
     [SerializeField] private float enemyMoveSpeedMultiplier = 1.01f;
 
     public float GetCurrentMaxHP()
