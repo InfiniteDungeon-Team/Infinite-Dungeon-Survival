@@ -100,11 +100,13 @@ public class HealthPack : MonoBehaviour
         transform.position = new Vector2(dropZonePos.x, transform.position.y);
 
         // Drop the healthpack
-        LeanTween.moveY(gameObject, dropZonePos.y, 1f).setSpeed(fallSpeed).setEase(LeanTweenType.linear).setOnComplete(() => StartCoroutine(CountdownToDespawn())).setOnComplete(() => ToggleCollider(true));
+        LeanTween.moveY(gameObject, dropZonePos.y, 1f).setSpeed(fallSpeed).setEase(LeanTweenType.linear).setOnComplete(() => StartCoroutine(CountdownToDespawn()));
     }
 
     IEnumerator CountdownToDespawn()
     {
+        ToggleCollider(true); // turn on the collider so it can be picked up
+
         yield return new WaitForSeconds(1);
 
         for (int i = 0; i < 4; i++)

@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = Unity.Multiplayer.Center
-build_property.ProjectDir = /Users/elliottewideman/Desktop/Infinite-Dungeon-Survival/The Trials/
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 

@@ -156,7 +156,7 @@ public class PlayerUpgradeManager : MonoBehaviour
             playerHealthText.color = Color.Lerp(lowHealthColor, highHealthColor, healthPercent);
         }
 
-        // Pulse (color fade) when below threshold
+        // pulse when below threshold
         if (healthPercent <= lowHealthThreshold)
         {
             if (!isPulsing)

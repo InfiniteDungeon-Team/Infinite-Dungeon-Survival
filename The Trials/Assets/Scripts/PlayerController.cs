@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Diagnostics.CodeAnalysis;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Player Components
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -30,8 +29,12 @@ public class PlayerController : MonoBehaviour
     private bool isReloading = false;
     [SerializeField] GameObject reloadBar;
     [SerializeField] Transform reloadBarTransform;
+    [SerializeField] private TMP_Text playerAmmoText;
 
-
+    // Special Attack Stuff
+    [SerializeField] private TMP_Text playerSpecialText;
+    [SerializeField] private Color highLerpColor = Color.green;
+    [SerializeField] private Color lowLerpColor = Color.red;
 
     // Crosshair stuff
     [SerializeField] private Transform crosshairTransform;
@@ -118,7 +121,9 @@ public class PlayerController : MonoBehaviour
 
             // decrement bullets left in magazine, and begin reload sequence if <= 0
             shotsRemaining--;
-            //Debug.Log($"Bullets Left: {shotsRemaining} / {playerUpgradeManager.GetCurrentPlayerMagazineSize()}");
+            playerAmmoText.text = shotsRemaining.ToString();
+            playerAmmoText.color = Color.Lerp(lowLerpColor, highLerpColor, shotsRemaining / (float)playerUpgradeManager.GetCurrentPlayerMagazineSize());
+
 
             if (shotsRemaining <= 0)
             {
@@ -287,6 +292,8 @@ public class PlayerController : MonoBehaviour
 
         // give the player a full magazine and allow them to shoot again
         shotsRemaining = playerUpgradeManager.GetCurrentPlayerMagazineSize();
+        playerAmmoText.text = shotsRemaining.ToString();
+        playerAmmoText.color = highLerpColor;
         isReloading = false;
     }
 
@@ -377,7 +384,17 @@ public class PlayerController : MonoBehaviour
     // amount of time that needs to pass before the special attack can be used again
     IEnumerator SpecialCooldown()
     {
-        yield return new WaitForSeconds(10f);
+        playerSpecialText.text = "";
+        playerSpecialText.color = lowLerpColor;
+
+        for (int i = 0; i< 8; i++)
+        {
+            yield return new WaitForSeconds(1.50f);
+            playerSpecialText.text += "|";
+
+            playerSpecialText.color = Color.Lerp(lowLerpColor, highLerpColor, i/8f);
+        }
+
         SetCanFireSpecial(true);
     }
 

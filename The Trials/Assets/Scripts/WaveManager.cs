@@ -14,7 +14,7 @@ public class WaveManager : MonoBehaviour
     // Other Wave Related Things
     [SerializeField] WaveCountdownUI waveCountdownUI;
     [SerializeField] private int currentWaveID = 1;
-    public float waveDuration { get; private set; } = 20f; // the duration of a single wave
+    public float waveDuration { get; private set; } = 60f; // the duration of a single wave
     private float baseMin = 1f; // base minimum spawn time between enemy spawns
     private float baseMax = 2.5f; // base maximum spawn time between enemy spawns
     private float decay = 0.95f; // 5% faster each wave
