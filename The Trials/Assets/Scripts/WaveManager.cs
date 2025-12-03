@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -39,6 +40,8 @@ public class WaveManager : MonoBehaviour
     // UI Stuff
     [SerializeField] private TMP_Text waveNumTMP;
     [SerializeField] private TMP_Text wavetimerTMP;
+    [SerializeField] RectTransform gameOverRectTransform;
+    private float timeToTweenIn = 1.50f;
 
     // Wave Timing
     private Coroutine waveRoutine;
@@ -155,6 +158,19 @@ public class WaveManager : MonoBehaviour
         SetWaveIsActive(false);
     }
 
+    public void EndWaveGameOver()
+    {
+        Debug.Log("Wave End - Game Over!");
+        
+        // Set end of wave behaviors on player
+        playerController.WaveStopBehaviors();
+
+        StopAllCoroutines();
+        StartCoroutine(WaitBeforeGameOverScreen());
+
+
+    }
+
     private IEnumerator KillEnemiesSequentially()
     {
         // to create a brief pause at the end of the wave before killing off enemies
@@ -177,7 +193,7 @@ public class WaveManager : MonoBehaviour
         upgradeMenuManager.InitiateUpgradeMenu();
     }
 
-    IEnumerator RunWaveUIElements(float duration)
+    IEnumerator RunWaveUIElements(float duration = 60f)
     {
             SetWaveNumberUI(GetCurrentWaveID());
             float timeRemaining = duration;
@@ -193,8 +209,6 @@ public class WaveManager : MonoBehaviour
 
         // Make sure we show 0 at the end
         wavetimerTMP.text = "0";
-
-        Debug.Log("Wave timer finished!");
     }
 
     private void SetMinAndMax(int waveNumber)
@@ -237,5 +251,27 @@ public class WaveManager : MonoBehaviour
     private void SetWaveIsActive(bool state)
     {
         WaveIsActive = state;
+    }
+
+    IEnumerator WaitBeforeGameOverScreen()
+    {
+        yield return new WaitForSeconds(1.5f);
+        TweenInGameOver();
+    }
+    private void TweenInGameOver()
+    {
+        // start off screen above camera view
+        gameOverRectTransform.anchoredPosition = new Vector2(0f, 2000f);
+
+        // set the game over gameobject to active in the scene        
+        gameOverRectTransform.gameObject.SetActive(true);
+
+        // tween to center
+        LeanTween.move(gameOverRectTransform, Vector3.zero, timeToTweenIn).setEaseOutBounce();
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("Main");
     }
 }

@@ -244,6 +244,10 @@ public class PlayerController : MonoBehaviour
 
     private void TakeDamage(int damageTaken)
     {
+        // do not take damage if the player is dead
+        if (playerUpgradeManager.GetIsDead())
+            return;
+
         playerUpgradeManager.SetPlayerCurrentHP(damageTaken);
 
         // trigger player death if health is <= 0 after taking damage
@@ -259,6 +263,8 @@ public class PlayerController : MonoBehaviour
 
         // reset the player's rotation to face down
         transform.rotation = Quaternion.identity;
+
+        waveManager.EndWaveGameOver();
     }
 
     IEnumerator ReloadSequence()
@@ -335,9 +341,14 @@ public class PlayerController : MonoBehaviour
 
     public void WaveStartBehaviors()
     {
+        shotsRemaining = playerUpgradeManager.GetCurrentPlayerMagazineSize();
+        playerAmmoText.text = shotsRemaining.ToString();
+        playerAmmoText.color = highLerpColor;
         SetCanFire(true);
         SetCanMove(true);
         rb.freezeRotation = false;
+
+
     }
     public void WaveStopBehaviors()
     {
@@ -446,5 +457,16 @@ public class PlayerController : MonoBehaviour
             FireEightWayBurst(angleToShoot);
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    public void ResetPlayer()
+    {
+        // Move player to center of room
+        transform.position = Vector2.zero;
+
+
+        playerAmmoText.text = shotsRemaining.ToString();
+        playerAmmoText.color = Color.Lerp(lowLerpColor, highLerpColor, shotsRemaining / (float)playerUpgradeManager.GetCurrentPlayerMagazineSize());
+
     }
 }
