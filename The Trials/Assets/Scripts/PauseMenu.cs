@@ -33,8 +33,10 @@ public class PauseMenu : MonoBehaviour
 
         Debug.Log("Resumed. timeScale = " + Time.timeScale);
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // HB - I commented this out. The cursor needs to be visible and unlocked for game to play
+
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
     }
 
     public void PauseGame()

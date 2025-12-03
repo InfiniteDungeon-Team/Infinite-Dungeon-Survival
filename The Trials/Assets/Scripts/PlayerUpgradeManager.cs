@@ -6,15 +6,13 @@ public class PlayerUpgradeManager : MonoBehaviour
 {
     [SerializeField] WaveManager waveManager;
 
-
-
     // Base Player Stats
-    private int playerBaseHP = 5;
+    private int playerBaseHP = 1;
     private float playerBaseDamage = 2;
-    private float playerBaseMoveSpeed = 10;
+    private float playerBaseMoveSpeed = 8;
     private int playerBaseSpecialAttacks = 1;
     private int playerBaseMagazineSize = 10;
-    private float playerBaseReloadSpeed = 4f;
+    private float playerBaseReloadSpeed = 3f;
     private int playerBaseHealAmount = 5;
 
     // Player Stat Multipliers
@@ -50,15 +48,7 @@ public class PlayerUpgradeManager : MonoBehaviour
     // On initial game load this will default to base values
     private void Awake()
     {
-        currentPlayerMaxHP = playerBaseHP;
-        currentPlayerDamage = playerBaseDamage;
-        currentPlayerMoveSpeed = playerBaseMoveSpeed;
-        currentPlayerSpecialAttacks = playerBaseSpecialAttacks;
-        currentPlayerMagainzeSize = playerBaseMagazineSize;
-        currentPlayerReloadSpeed = playerBaseReloadSpeed;
-        currentPlayerHP = currentPlayerMaxHP;
-        SetPlayerCurrentHP(0);
-        currentPlayerHealAmount = playerBaseHealAmount;
+        ResetPlayerStats();
     }
 
     // getters
@@ -156,7 +146,7 @@ public class PlayerUpgradeManager : MonoBehaviour
             playerHealthText.color = Color.Lerp(lowHealthColor, highHealthColor, healthPercent);
         }
 
-        // Pulse (color fade) when below threshold
+        // pulse when below threshold
         if (healthPercent <= lowHealthThreshold)
         {
             if (!isPulsing)
@@ -224,5 +214,18 @@ public class PlayerUpgradeManager : MonoBehaviour
             $"MAG: {currentPlayerMagainzeSize} | " +
             $"RELOAD: {currentPlayerReloadSpeed}"
         );
+    }
+
+    public void ResetPlayerStats()
+    {
+        currentPlayerMaxHP = playerBaseHP;
+        currentPlayerDamage = playerBaseDamage;
+        currentPlayerMoveSpeed = playerBaseMoveSpeed;
+        currentPlayerSpecialAttacks = playerBaseSpecialAttacks;
+        currentPlayerMagainzeSize = playerBaseMagazineSize;
+        currentPlayerReloadSpeed = playerBaseReloadSpeed;
+        currentPlayerHP = currentPlayerMaxHP;
+        SetPlayerCurrentHP(0);
+        currentPlayerHealAmount = playerBaseHealAmount;
     }
 }
