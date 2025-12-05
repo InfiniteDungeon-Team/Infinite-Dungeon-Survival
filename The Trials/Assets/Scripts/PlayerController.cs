@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     // Take Damage
     private bool inIFrames = false;
 
+    [SerializeField] AudioManager audioManager;
     private void Awake()
     {
         mainCam = Camera.main;
@@ -107,6 +108,8 @@ public class PlayerController : MonoBehaviour
         // Fire arrows on mouse click
         if (Input.GetMouseButtonDown(0) && canFire)
         {
+            audioManager.PlayShootSFX();
+
             // Play firing animation
             animator.SetTrigger("Shoot");
 
@@ -257,6 +260,8 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerDeath()
     {
+        audioManager.StopMusic();
+
         animator.SetBool("Dead", true);
         SetCanMove(false);
         SetCanFire(false);
